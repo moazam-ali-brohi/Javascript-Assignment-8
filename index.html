@@ -5,25 +5,43 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <title>Calculator</title>
+    <title>StopWatch</title>
 </head>
 
 <body>
-   <div class="main">
-       <div class="nbr">
-        <h1>11</h1><h2>:</h2>
-        <h1>22</h1><h2>:</h2>
-        <h1>567</h1>
-       </div>
-       <div class="btns">
-        <button>Start</button>
-        <button>Stop</button>
-        <button>Reset</button>
-       </div>
-   </div>
+
+
+        <div class="main">
+            <div class="nbr">
+                <h1 id="min">00</h1>
+                <h2>:</h2>
+                <h1 id="sec">00</h1>
+                <h2>:</h2>
+                <h1 id="msec">00</h1>
+            </div>
+            <div class="btns">
+                <div class="boxx">
+                    <button class="btn-1" onclick="start()" id="startb" >Start</button>
+                </div>
+                <div class="boxx">
+                    <button class="btn-2" onclick="stop()" >Stop</button>
+                </div>
+                <div class="boxx">
+                    <button class="btn-3" onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <p> <i>Developer Moazam ali</i></p><a href="https://myportfolio360-dbbac.web.app/" target="_blank">Portfolio</a>
+        </div>
+
+
     <script src="app.js"></script>
 </body>
 
