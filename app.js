@@ -1,21 +1,21 @@
 
 var min = 00 ;
 var sec = 00;
-var msec = 00;
+var mili = 00;
 
 var minHeading = document.getElementById("min");
 var SecHeading = document.getElementById("sec");
-var MiliSecHeading = document.getElementById("msec");
-var startbutton = document.getElementById("startb")
+var MiliHeading = document.getElementById("mili");
+var strtBtn = document.getElementById("startbtn")
 var interval;
 
 function timer(){
-    msec++
-    MiliSecHeading.innerHTML = msec;
-    if( msec >= 100){
+    mili++
+    MiliHeading.innerHTML = mili;
+    if( mili >= 100){
         sec++
         SecHeading.innerHTML = sec;
-        msec = 00;
+        mili = 00;
         
     }else if ( sec >= 60){
         min++
@@ -25,23 +25,21 @@ function timer(){
 }
 function start(){
 interval = setInterval(timer,10);
-startbutton.disabled = true;
+strtBtn.disabled = true;
 }
 
 function stop(){
     clearInterval(interval);
-    startbutton.disabled = false;
+    strtBtn.disabled = false;
 }
 
 function reset(){
     clearInterval(interval);
     min = 00;
     sec = 00;
-    msec = 00;
+    mili = 00;
     minHeading.innerHTML = min;
     SecHeading.innerHTML = sec;
-    MiliSecHeading.innerHTML = msec;
-    startbutton.disabled = false;    
-    
-
-}
+    MiliHeading.innerHTML = mili;
+    strtBtn.disabled = false;    
+    }
